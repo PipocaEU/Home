@@ -1,0 +1,16 @@
+name: Set up Autolink References
+
+on:
+  workflow_dispatch:  # Permite acionar manualmente
+  push:               # Ou pode ser acionado por push em branches específicos
+    branches: [ main ]
+
+jobs:
+  set-autolink:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Autolink Reference
+        uses: fiddlermikey/action-add-autolink@v1.0
+        with:
+          # Você provavelmente precisará adicionar parâmetros aqui
+          # Consulte a documentação da ação para os parâmetros necessários

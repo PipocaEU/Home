@@ -1,19 +1,18 @@
-name: Set up Autolink References
+name: Set up Jira Autolink References
 
 on:
   workflow_dispatch:  # Permite acionar manualmente
   push:
-    branches: [ main ]  # Ou a branch que você quer monitorar
+    branches: [ main ]  # Executa ao fazer push na branch principal
 
 jobs:
-  set-autolink:
-    runs-on: ubuntu-latest  # Não precisa de self-hosted runner
+  set-jira-autolink:
+    runs-on: ubuntu-latest
+    
     steps:
-      - name: Set Autolink Reference
+      - name: Configure Jira Autolinks
         uses: fiddlermikey/action-add-autolink@v1.0
         with:
-          # Parâmetros obrigatórios (verifique a doc da ação)
-          reference_prefix: "TICKET-12"  # Exemplo: links como "TICKET-123"
-          target_url: "https://exemplo.com/issues/{{number}}"  # URL de destino
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # Use um PAT com permissões
+          token: ${{ secrets.PAT_TOKEN }}  # Token com permissões de admin
+          keyPrefix: "UP-"  # Prefixo do projeto no Jira (UP-123)
+          url: "https://expatcorn.atlassian.net/browse/UP-{{number}}"  # URL do Jira

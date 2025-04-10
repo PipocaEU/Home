@@ -13,7 +13,7 @@ jobs:
         uses: fiddlermikey/action-add-autolink@v1.0
         with:
           # Parâmetros obrigatórios (verifique a doc da ação)
-          reference_prefix: "TICKET-"  # Exemplo: links como "TICKET-123"
-          target_url: "https://exemplo.com/TICKET-{{number}}"  # URL de destino
+          reference_prefix: "TICKET-12"  # Exemplo: links como "TICKET-123"
+          target_url: "https://exemplo.com/issues/{{number}}"  # URL de destino
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # Use um PAT com permissões

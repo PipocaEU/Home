@@ -11,13 +11,12 @@ jobs:
       - name: Create Jira Issue
         uses: atlassian/gajira-create@v2.0.0
         with:
-          project: UP
-          issuetype: Task
+          project: "UP" # Código do projeto Jira (MAIÚSCULAS)
+          issuetype: "Task" # Tipo de issue no Jira
           summary: ${{ github.event.issue.title }}
           description: |
-            **GitHub Issue:** [${{ github.event.issue.title }}](${{ github.event.issue.html_url }})
-            **Autor:** @${{ github.event.issue.user.login }}
-            
+            GitHub Issue: ${{ github.event.issue.html_url }}
+            Autor: ${{ github.event.issue.user.login }}
             ${{ github.event.issue.body }}
         env:
           JIRA_BASE_URL: https://expatcorn.atlassian.net

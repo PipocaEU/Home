@@ -1,0 +1,24 @@
+name: Sync GitHub Issues to Jira
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  sync-to-jira:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Jira Issue
+        uses: atlassian/gajira-create@v3
+        env:
+          JIRA_BASE_URL: https://expatcorn.atlassian.net
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+        with:
+          project: UP  # Código do projeto no Jira
+          issuetype: Task  # Tipo de issue no Jira
+          summary: ${{ github.event.issue.title }}
+          description: |
+            GitHub Issue: ${{ github.event.issue.html_url }}
+            Criada por: ${{ github.event.issue.user.login }}
+            ${{ github.event.issue.body }}

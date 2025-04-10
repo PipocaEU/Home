@@ -2,10 +2,10 @@ name: Sync GitHub Issues to Jira
 
 on:
   issues:
-    types: [opened, edited]
+    types: [opened]
 
 jobs:
-  sync-to-jira:
+  create-jira-issue:
     runs-on: ubuntu-latest
     steps:
       - name: Create Jira Issue
@@ -15,8 +15,8 @@ jobs:
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
           JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
         with:
-          project: UP  # Código do projeto no Jira
-          issuetype: Task  # Tipo de issue no Jira
+          project: UP
+          issuetype: Task
           summary: ${{ github.event.issue.title }}
           description: |
             GitHub Issue: ${{ github.event.issue.html_url }}

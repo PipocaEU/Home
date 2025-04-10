@@ -15,8 +15,9 @@ jobs:
           issuetype: Task
           summary: ${{ github.event.issue.title }}
           description: |
-            GitHub Issue: ${{ github.event.issue.html_url }}
-            Criada por: ${{ github.event.issue.user.login }}
+            **GitHub Issue:** [${{ github.event.issue.title }}](${{ github.event.issue.html_url }})
+            **Autor:** @${{ github.event.issue.user.login }}
+            
             ${{ github.event.issue.body }}
         env:
           JIRA_BASE_URL: https://expatcorn.atlassian.net

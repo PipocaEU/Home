@@ -2,14 +2,18 @@ name: Set up Autolink References
 
 on:
   workflow_dispatch:  # Permite acionar manualmente
-  push:               # Ou pode ser acionado por push em branches específicos
-    branches: [ main ]
+  push:
+    branches: [ main ]  # Ou a branch que você quer monitorar
 
 jobs:
   set-autolink:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Não precisa de self-hosted runner
     steps:
       - name: Set Autolink Reference
         uses: fiddlermikey/action-add-autolink@v1.0
         with:
-          runs-on: self-hosted
+          # Parâmetros obrigatórios (verifique a doc da ação)
+          reference_prefix: "TICKET-"  # Exemplo: links como "TICKET-123"
+          target_url: "https://exemplo.com/TICKET-{{number}}"  # URL de destino
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # Use um PAT com permissões

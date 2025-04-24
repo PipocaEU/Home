@@ -23,14 +23,16 @@
 </head>
 
 <body class="bg-white font-opensans">
-
-  <header class="bg-gray-100 px-4 py-3 rounded-b-2xl shadow">
+  <!-- Header fixo (fixed top-0) no topo da página com fundo cinza claro e sombra -->
+  <header class="bg-gray-100 px-4 py-3 rounded-b-2xl shadow fixed top-0 left-0 w-full z-50">
     <nav class="flex items-center justify-between mx-auto max-w-7xl">
 
       <!-- Logo -->
       <div class="flex items-center gap-2">
         <div class="w-10 h-10 rounded-full overflow-hidden">
+          <a href="#home"></a>
           <img src="asset/PA_logo.png" alt="Logo Pipoca Academy" class="w-full h-full object-cover" />
+          </a>
         </div>
         <span class="font-bold font-fredoka text-black text-lg">Pipoca Academy</span>
       </div>
@@ -75,7 +77,10 @@
       navLinks.classList.toggle('top-[9%]');
     }
   </script>
-
+<!-- espaçamento para compensar o header fixo -->
+<main class="pt-20">
+ 
+</main>
 </body>
 
 </html>

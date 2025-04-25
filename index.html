@@ -39,48 +39,54 @@
 
       <!-- Botão Menu (Hambúrguer) -->
       <div class="md:hidden">
-        <!-- Este botão só aparece em dispositivos com largura menor que o breakpoint 'md' -->
-        <!-- onclick chama a função JavaScript que alterna a visibilidade do menu -->
         <button onclick="onToggleMenu()" class="text-3xl focus:outline-none" id="menu-btn">
           ☰
         </button>
       </div>
 
-      <!-- Comportamento responsivo:
-     - 'absolute' e 'top-[-100%]' deixa o menu invisível inicialmente "fica fora da tela"
-     - 'top-[9%]' coloca esse elemento a 9% de distância do topo da tela
-     - quando clicamos no botão, trazemos ele pra 9% do topo, ou seja, ele aparece na tela! -->
 
-      <div
-        class="nav-links absolute md:static md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 transition-all duration-500 z-10">
-        <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-base leading-6 font-normal">
-          <!-- Cada item da navegação com efeito hover -->
-          <li><a href="#home" class=" hover:underline">Home</a></li>
-          <li><a href="#cursos" class=" hover:underline">Cursos</a></li>
-          <li><a href="#mentoria" class=" hover:underline">Mentoria</a></li>
-          <li><a href="#carreiras" class=" hover:underline">Carreiras</a></li>
-          <li><a href="#equipe" class=" hover:underline">Equipe</a></li>
+      <!-- Menu mobile (aparece apenas em telas menores que 'md') -->
+      <!-- 
+        Comportamento:
+        - 'absolute' posiciona o menu em relação à página
+        - 'top-16' posiciona o menu logo abaixo do header fixo (~64px)
+        - 'hidden' mantém o menu invisível inicialmente
+        - 'flex' é adicionado via JS ao clicar no botão hambúrguer
+        - 'md:hidden' esconde esse menu em telas médias ou maiores (desktop)
+        - 'z-40' garante que o menu fique acima do conteúdo, mas abaixo do header (que tem z-50)
+      -->
+
+      <div id="mobileMenu"
+        class="absolute top-16 left-0 w-full bg-gray-100 px-5 py-6 flex-col gap-8 text-base leading-6 font-normal md:hidden hidden shadow z-40">
+        <ul class="flex flex-col gap-6">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#cursos" class="hover:underline">Cursos</a></li>
+          <li><a href="#mentoria" class="hover:underline">Mentoria</a></li>
+          <li><a href="#carreiras" class="hover:underline">Carreiras</a></li>
+          <li><a href="#equipe" class="hover:underline">Equipe</a></li>
         </ul>
       </div>
+
 
 
     </nav>
   </header>
 
   <script>
-    // Seleciona o menu de navegação e o botão do menu
-    const navLinks = document.querySelector('.nav-links');
-    const menuBtn = document.getElementById('menu-btn');
+    // Seleciona o menu mobile pelo ID
+    const menu = document.getElementById('mobileMenu');
 
-    // Alterna a classe que posiciona o menu para visível ou escondido
+    // Alterna entre exibir ('flex') e esconder ('hidden') o menu
     function onToggleMenu() {
-      navLinks.classList.toggle('top-[9%]');
+      menu.classList.toggle('hidden'); // esconde ou mostra
+      menu.classList.toggle('flex');   // ativa layout flex quando visível
     }
   </script>
-<!-- espaçamento para compensar o header fixo -->
-<main class="pt-20">
- 
-</main>
+
+  <!-- espaçamento para compensar o header fixo -->
+  <main class="pt-20">
+
+  </main>
 </body>
 
 </html>

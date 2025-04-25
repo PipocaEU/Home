@@ -7,7 +7,7 @@
 ---
 
 # 🧭 Header 
-Este projeto é um componente inicial de **navegação responsiva** para o site da **Pipoca Academy**, construído com **HTML** e **Tailwind CSS** no modelo **mobile first**. 
+Componente inicial de **navegação responsiva** para a landing page da **Pipoca Academy** no modelo **mobile first**. 
 
 A navegação inclui:
 - Logo Pipoca Academy

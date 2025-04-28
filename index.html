@@ -26,62 +26,54 @@
   <!-- Header fixo (fixed top-0) no topo da página com fundo cinza claro e sombra -->
   <header class="bg-gray-100 px-4 py-3 rounded-b-2xl shadow fixed top-0 left-0 w-full z-50">
     <nav class="flex items-center justify-between mx-auto max-w-7xl">
-
+  
       <!-- Logo -->
       <div class="flex items-center gap-2">
         <div class="w-10 h-10 rounded-full overflow-hidden">
-          <a href="#home"></a>
-          <img src="asset/PA_logo.png" alt="Logo Pipoca Academy" class="w-full h-full object-cover" />
+          <a href="#home">
+            <img src="asset/PA_logo.png" alt="Logo Pipoca Academy" class="w-full h-full object-cover" />
           </a>
         </div>
         <span class="font-bold font-fredoka text-black text-lg">Pipoca Academy</span>
       </div>
-
-      <!-- Botão Menu (Hambúrguer) -->
+  
+      <!-- Menu Desktop (visível em md pra cima) -->
+      <div class="hidden md:flex items-center gap-[4vw] text-base leading-6 font-normal">
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#cursos" class="hover:underline">Cursos</a>
+        <a href="#mentoria" class="hover:underline">Mentoria</a>
+        <a href="#carreiras" class="hover:underline">Carreiras</a>
+        <a href="#equipe" class="hover:underline">Equipe</a>
+      </div>
+  
+      <!-- Botão Menu Mobile (só aparece no mobile) -->
       <div class="md:hidden">
         <button onclick="onToggleMenu()" class="text-3xl focus:outline-none" id="menu-btn">
           ☰
         </button>
       </div>
-
-
-      <!-- Menu mobile (aparece apenas em telas menores que 'md') -->
-      <!-- 
-        Comportamento:
-        - 'absolute' posiciona o menu em relação à página
-        - 'top-16' posiciona o menu logo abaixo do header fixo (~64px)
-        - 'hidden' mantém o menu invisível inicialmente
-        - 'flex' é adicionado via JS ao clicar no botão hambúrguer
-        - 'md:hidden' esconde esse menu em telas médias ou maiores (desktop)
-        - 'z-40' garante que o menu fique acima do conteúdo, mas abaixo do header (que tem z-50)
-      -->
-
-      <div id="mobileMenu"
-        class="absolute top-16 left-0 w-full bg-gray-100 px-5 py-6 flex-col gap-8 text-base leading-6 font-normal md:hidden hidden shadow z-40">
-        <ul class="flex flex-col gap-6">
-          <li><a href="#home" class="hover:underline">Home</a></li>
-          <li><a href="#cursos" class="hover:underline">Cursos</a></li>
-          <li><a href="#mentoria" class="hover:underline">Mentoria</a></li>
-          <li><a href="#carreiras" class="hover:underline">Carreiras</a></li>
-          <li><a href="#equipe" class="hover:underline">Equipe</a></li>
-        </ul>
-      </div>
-
-
-
+  
     </nav>
+  
+    <!-- Menu Mobile (visível apenas em mobile, hidden no desktop) -->
+    <div id="mobileMenu" class="hidden flex-col items-center bg-gray-100 w-full px-5 py-6 gap-6 text-base leading-6 font-normal md:hidden shadow z-40">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#cursos" class="hover:underline">Cursos</a>
+      <a href="#mentoria" class="hover:underline">Mentoria</a>
+      <a href="#carreiras" class="hover:underline">Carreiras</a>
+      <a href="#equipe" class="hover:underline">Equipe</a>
+    </div>
   </header>
-
+  
   <script>
-    // Seleciona o menu mobile pelo ID
     const menu = document.getElementById('mobileMenu');
-
-    // Alterna entre exibir ('flex') e esconder ('hidden') o menu
+  
     function onToggleMenu() {
-      menu.classList.toggle('hidden'); // esconde ou mostra
-      menu.classList.toggle('flex');   // ativa layout flex quando visível
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
     }
   </script>
+  
 
   <!-- espaçamento para compensar o header fixo -->
   <main class="pt-20">

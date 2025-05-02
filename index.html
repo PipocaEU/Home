@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="asset/expatcorn.png" type="x-icon">
+  <meta name="description" content="Pipoca Academy é uma plataforma de educação voltada para profissionais que desejam migrar para o mercado de tecnologia.">
+  <meta property="og:title" content="Pipoca Academy">
   <title>Pipoca Academy</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
   <style>
     .font-fredoka {
       font-family: 'Fredoka', sans-serif;
     }
-
     .font-opensans {
       font-family: 'Open Sans', sans-serif;
     }
   </style>
 </head>
-
 <body class="bg-white font-opensans">
   <!-- Header fixo (fixed top-0) no topo da página com fundo cinza claro e sombra -->
-  <header class="bg-gray-100 px-4 py-3 rounded-b-2xl shadow fixed top-0 left-0 w-full z-50">
+  <header class="bg-gray-100 px-4 py-3 rounded-b-2xl  fixed top-0 left-0 w-full z-50">
     <nav class="flex items-center justify-between mx-auto max-w-7xl">
-  
       <!-- Logo -->
       <div class="flex items-center gap-2">
         <div class="w-10 h-10 rounded-full overflow-hidden">
@@ -36,49 +33,44 @@
         </div>
         <span class="font-bold font-fredoka text-black text-lg">Pipoca Academy</span>
       </div>
-  
       <!-- Menu Desktop (visível em md pra cima) -->
       <div class="hidden md:flex items-center gap-[4vw] text-base leading-6 font-normal">
         <a href="#home" class="hover:underline">Home</a>
+        <a href="#sobre" class="hover:underline">Sobre</a>
         <a href="#cursos" class="hover:underline">Cursos</a>
         <a href="#mentoria" class="hover:underline">Mentoria</a>
         <a href="#carreiras" class="hover:underline">Carreiras</a>
         <a href="#equipe" class="hover:underline">Equipe</a>
+        <a href="#contato" class="hover:underline">Contato</a>
       </div>
-  
       <!-- Botão Menu Mobile (só aparece no mobile) -->
       <div class="md:hidden">
         <button onclick="onToggleMenu()" class="text-3xl focus:outline-none" id="menu-btn">
           ☰
         </button>
       </div>
-  
     </nav>
-  
     <!-- Menu Mobile (visível apenas em mobile, hidden no desktop) -->
-    <div id="mobileMenu" class="hidden flex-col items-center bg-gray-100 w-full px-5 py-6 gap-6 text-base leading-6 font-normal md:hidden shadow z-40">
+    <div id="mobileMenu"
+      class="hidden flex-col items-center bg-gray-100 w-full px-5 py-6 gap-6 text-base leading-6 font-normal md:hidden z-40">
       <a href="#home" class="hover:underline">Home</a>
+      <a href="#sobre" class="hover:underline">Sobre</a>
       <a href="#cursos" class="hover:underline">Cursos</a>
       <a href="#mentoria" class="hover:underline">Mentoria</a>
       <a href="#carreiras" class="hover:underline">Carreiras</a>
       <a href="#equipe" class="hover:underline">Equipe</a>
+      <a href="#contato" class="hover:underline">Contato</a>
     </div>
   </header>
-  
   <script>
     const menu = document.getElementById('mobileMenu');
-  
     function onToggleMenu() {
       menu.classList.toggle('hidden');
       menu.classList.toggle('flex');
     }
   </script>
-  
-
   <!-- espaçamento para compensar o header fixo -->
   <main class="pt-20">
-
   </main>
 </body>
-
 </html>

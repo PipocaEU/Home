@@ -1,0 +1,17 @@
+:root {
+  --color-grey: #4e4e4e;
+  --color-yellow: #fbbb18;
+}
+
+.font-fredoka {
+  font-family: "Fredoka", sans-serif;
+}
+.font-opensans {
+  font-family: "Open Sans", sans-serif;
+}
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+.font-inter {
+  font-family: "Inter", sans-serif;
+}

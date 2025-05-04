@@ -28,7 +28,9 @@
   </head>
   <body class="font-opensans">
     <!-- Header fixo (fixed top-0) no topo da página com fundo cinza claro e sombra -->
-    <header class="bg-gray-100 px-4 py-3 fixed top-0 left-0 w-full z-50">
+    <header
+      class="bg-white bg-opacity-70 px-4 py-3 fixed top-0 left-0 w-full z-50"
+    >
       <nav class="flex items-center justify-between mx-auto max-w-7xl">
         <!-- Logo -->
         <div class="flex items-center gap-2">
@@ -81,30 +83,33 @@
       </div>
     </header>
     <main>
+      <!-- Criação da secção Hero -->
       <section
         id="hero"
-        class="h-screen bg-[url(asset/img_hero.jpg)] bg-cover text-[var(--color-grey)]"
+        class="h-screen pt-[64px] bg-[url(asset/img_hero.jpg)] bg-cover sm:bg-left-top bg-[-550px] text-white flex sm:items-center items-end sm:pl-[50px] lg:pl-[80px] p-4"
       >
-        <div class="pl-[50px] pt-[150px]">
-          <h2 class="font-roboto font-medium text-5xl w-[600px]">
+        <div
+          class="bg-black bg-opacity-30 lg:w-[648px] sm:w-[513px] sm:px-10 sm:py-14 px-5 py-7 rounded-2xl"
+        >
+          <h2 class="font-roboto font-medium lg:text-5xl sm:text-4xl text-2xl">
             Transforme sua carreira. <br />
             Migre para a tecnologia com suporte real e personalizado<span
               class="text-[var(--color-yellow)]"
               >.</span
             >
           </h2>
-          <h3 class="pt-4 font-roboto font-normal text-4xl w-[550px]">
+          <h3 class="pt-4 font-roboto lg:text-3xl/10 sm:text-2xl/10 text-xl/10">
             Se reinvente com aprendizado ágil e mentorias focadas na sua entrada
             no mercado de TI.
           </h3>
-          <div class="pt-6">
+          <div class="pt-6 flex flex-col sm:flex-row">
             <button
-              class="bg-[var(--color-yellow)] rounded-lg py-4 px-6 font-inter font-semibold"
+              class="self-start bg-[var(--color-yellow)] text-black rounded-lg py-4 px-6 font-inter font-semibold"
             >
               Cadastre-se grátis!
             </button>
             <button
-              class="ml-6 bg-transparent rounded-lg border-[var(--color-yellow)] border-2 py-4 px-6 font-inter font-semibold"
+              class="self-start sm:ml-6 mt-6 sm:mt-0 bg-transparent rounded-lg border-[var(--color-yellow)] text-[var(--color-yellow)] border-2 py-4 px-6 font-inter font-semibold"
             >
               Saiba mais
             </button>

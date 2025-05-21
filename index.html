@@ -30,33 +30,37 @@
     <!-- Header fixo (fixed top-0) no topo da página com fundo cinza claro e sombra -->
     <header
       class="bg-white bg-opacity-70 px-4 py-3 fixed top-0 left-0 w-full z-50"
+      id="header"
+      data-testid="header"
     >
-      <nav class="flex items-center justify-between mx-auto max-w-7xl">
+      <nav class="flex items-center justify-between mx-auto max-w-7xl" id="nav" data-testid="nav">
         <!-- Logo -->
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2" id="logo-area" data-testid="logo-area">
           <div class="w-10 h-10 rounded-full overflow-hidden">
-            <a href="#home">
+            <a href="#home" data-testid="logo-link">
               <img
                 src="asset/PA_logo.png"
                 alt="Logo Pipoca Academy"
                 class="w-full h-full object-cover"
+                id="logo-img"
+                data-testid="logo-img"
               />
             </a>
           </div>
-          <span class="font-bold font-fredoka text-black text-lg"
-            >Pipoca Academy</span
-          >
+          <span class="font-bold font-fredoka text-black text-lg">Pipoca Academy</span>
         </div>
         <!-- Menu Desktop (visível em md pra cima) -->
         <div
           class="hidden md:flex items-center gap-[4vw] text-base leading-6 font-normal"
+          id="desktop-menu"
+          data-testid="desktop-menu"
         >
-          <a href="#home" class="hover:underline">Home</a>
-          <a href="#sobre" class="hover:underline">Sobre</a>
-          <a href="#cursos" class="hover:underline">Cursos</a>
-          <a href="#mentoria" class="hover:underline">Mentoria</a>
-          <a href="#carreiras" class="hover:underline">Carreiras</a>
-          <a href="#equipe" class="hover:underline">Equipe</a>
+          <a href="#home" class="hover:underline" data-testid="nav-home">Home</a>
+          <a href="#sobre" class="hover:underline" data-testid="nav-sobre">Sobre</a>
+          <a href="#cursos" class="hover:underline" data-testid="nav-cursos">Cursos</a>
+          <a href="#mentoria" class="hover:underline" data-testid="nav-mentoria">Mentoria</a>
+          <a href="#carreiras" class="hover:underline" data-testid="nav-carreiras">Carreiras</a>
+          <a href="#equipe" class="hover:underline" data-testid="nav-equipe">Equipe</a>
         </div>
         <!-- Botão Menu Mobile (só aparece no mobile) -->
         <div class="md:hidden">
@@ -64,6 +68,7 @@
             onclick="onToggleMenu()"
             class="text-3xl focus:outline-none"
             id="menu-btn"
+            data-testid="menu-btn"
           >
             ☰
           </button>
@@ -73,41 +78,56 @@
       <div
         id="mobileMenu"
         class="hidden flex-col items-center bg-gray-100 w-full px-5 py-6 gap-6 text-base leading-6 font-normal md:hidden z-40"
+        data-testid="mobile-menu"
       >
-        <a href="#home" class="hover:underline">Home</a>
-        <a href="#sobre" class="hover:underline">Sobre</a>
-        <a href="#cursos" class="hover:underline">Cursos</a>
-        <a href="#mentoria" class="hover:underline">Mentoria</a>
-        <a href="#carreiras" class="hover:underline">Carreiras</a>
-        <a href="#equipe" class="hover:underline">Equipe</a>
+        <a href="#home" class="hover:underline" data-testid="mobile-nav-home">Home</a>
+        <a href="#sobre" class="hover:underline" data-testid="mobile-nav-sobre">Sobre</a>
+        <a href="#cursos" class="hover:underline" data-testid="mobile-nav-cursos">Cursos</a>
+        <a href="#mentoria" class="hover:underline" data-testid="mobile-nav-mentoria">Mentoria</a>
+        <a href="#carreiras" class="hover:underline" data-testid="mobile-nav-carreiras">Carreiras</a>
+        <a href="#equipe" class="hover:underline" data-testid="mobile-nav-equipe">Equipe</a>
       </div>
     </header>
-    <main>
+    <main id="main-content" data-testid="main-content">
       <!-- Criação da secção Hero -->
       <section
         id="hero"
         class="h-screen pt-[64px] bg-[url(asset/img_hero.jpg)] bg-cover md:bg-top bg-[-540px] text-white flex sm:items-center items-end sm:pl-[50px] lg:pl-[80px] p-4"
+        data-testid="section-hero"
       >
         <div
           class="bg-black bg-opacity-70 lg:w-[648px] sm:w-[513px] sm:px-10 sm:py-14 px-5 py-7 rounded-2xl"
+          id="hero-content"
+          data-testid="hero-content"
         >
-          <h2 class="font-roboto font-medium lg:text-5xl sm:text-4xl text-2xl">
+          <h2
+            class="font-roboto font-medium lg:text-5xl sm:text-4xl text-2xl"
+            id="hero-title"
+            data-testid="hero-title"
+          >
             Transforme sua carreira. <br />
             Migre para a tecnologia com suporte real e personalizado.
-          <!-- <span  class="text-[var(--color-yellow)]" >.</span    > -->
           </h2>
-         <h3 class="pt-4 font-roboto lg:text-3xl/none l sm:text-2xl/snug text-xl/snug">
+          <h3
+            class="pt-4 font-roboto lg:text-3xl/none l sm:text-2xl/snug text-xl/snug"
+            id="hero-subtitle"
+            data-testid="hero-subtitle"
+          >
             Se reinvente com aprendizado ágil e mentorias focadas na sua entrada
             no mercado de TI.
           </h3>
-          <div class="pt-6 flex flex-col sm:flex-row">
+          <div class="pt-6 flex flex-col sm:flex-row" id="hero-buttons" data-testid="hero-buttons">
             <button
               class="self-start bg-[var(--color-yellow)] text-black rounded-lg py-4 px-6 font-inter font-semibold"
+              id="btn-cadastro"
+              data-testid="btn-cadastro"
             >
               Cadastre-se grátis!
             </button>
             <button
               class="self-start sm:ml-6 mt-6 sm:mt-0 bg-transparent rounded-lg border-[var(--color-yellow)] text-[var(--color-yellow)] border-2 py-3.5 px-6 font-inter font-semibold"
+              id="btn-saiba-mais"
+              data-testid="btn-saiba-mais"
             >
               Saiba mais
             </button>

@@ -26,10 +26,10 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="font-opensans">
+  <body class="bg-gray-100 font-opensans">
     <!-- Header fixo (fixed top-0) no topo da página com fundo cinza claro e sombra -->
     <header
-      class="bg-white bg-opacity-70 px-4 py-3 fixed top-0 left-0 w-full z-50"
+      class="fixed top-0 left-0 z-50 w-full px-4 py-3 bg-white bg-opacity-70"
       id="header"
       data-testid="header"
     >
@@ -44,18 +44,18 @@
           id="logo-area"
           data-testid="logo-area"
         >
-          <div class="w-10 h-10 rounded-full overflow-hidden">
+          <div class="w-10 h-10 overflow-hidden rounded-full">
             <a href="#home" data-testid="logo-link">
               <img
                 src="asset/PA_logo.png"
                 alt="Logo Pipoca Academy"
-                class="w-full h-full object-cover"
+                class="object-cover w-full h-full"
                 id="logo-img"
                 data-testid="logo-img"
               />
             </a>
           </div>
-          <span class="font-bold font-fredoka text-black text-lg"
+          <span class="text-lg font-bold text-black font-fredoka"
             >Pipoca Academy</span
           >
         </div>
@@ -102,7 +102,7 @@
       <!-- Menu Mobile (visível apenas em mobile, hidden no desktop) -->
       <div
         id="mobileMenu"
-        class="hidden flex-col items-center bg-gray-100 w-full px-5 py-6 gap-6 text-base leading-6 font-normal md:hidden z-40"
+        class="z-40 flex-col items-center hidden w-full gap-6 px-5 py-6 text-base font-normal leading-6 bg-gray-100 md:hidden"
         data-testid="mobile-menu"
       >
         <a href="#home" class="hover:underline" data-testid="mobile-nav-home"
@@ -150,7 +150,7 @@
           data-testid="hero-content"
         >
           <h2
-            class="font-roboto font-medium lg:text-4xl sm:text-4xl text-2xl"
+            class="text-2xl font-medium font-roboto lg:text-4xl sm:text-4xl"
             id="hero-title"
             data-testid="hero-title"
           >
@@ -166,7 +166,7 @@
             no mercado de TI.
           </h3>
           <div
-            class="pt-6 flex flex-col xl:flex-row"
+            class="flex flex-col pt-6 xl:flex-row"
             id="hero-buttons"
             data-testid="hero-buttons"
           >
@@ -183,6 +183,217 @@
               data-testid="btn-saiba-mais"
             >
               Saiba mais
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Criação da sessão cursos oferecidos -->
+      <section id="cusos-oferecidos" data-testid="section-cursos-oferecidos">
+        <div
+          class="flex flex-col gap-4 mx-3 my-5 text-center"
+          id="cursos-oferecidos-content"
+          data-testid="cursos-oferecidos-content"
+        >
+          <h2
+            class="font-inter font-bold text-[30px]"
+            id="cursos-oferecidos-title"
+            data-testid="cursos-oferecidos-title"
+          >
+            Comece sua
+            <span class="text-[var(--color-yellow)]">transição</span> com o pé
+            direito <span class="text-[var(--color-yellow)]">.</span>
+          </h2>
+          <p
+            class="font-inter font-medium text-[18px]"
+            id="cursos-oferecidos-text"
+            data-testid="cursos-oferecidos-text"
+          >
+            Aqui, aprender tecnologia é simples, direto e do seu jeito. Nossos
+            cursos de aprendizagem rapida são pensados para quem tem pouco
+            tempo, mas muita vontade de mudar de vida. Com conteúdos curtos e
+            práticos, você aprende só o que importa, no seu ritmo, com foco no
+            que o mercado realmente precisa.
+          </p>
+        </div>
+        <div
+          class="flex justify-center"
+          id="cursos-ofereidos-buttons"
+          data-testid="cursos-ofereidos-buttons"
+        >
+          <div
+            class="grid grid-cols-1 gap-6 w-[238px] h-[175px] rounded-bl-2xl"
+            id="cursos-oferecidos-grid"
+            data-testid="cursos-oferecidos-grid"
+          >
+            <button
+              class="relative bg-white w-[238px] h-[175px] border-2 rounded-tl-2xl rounded-bl-2xl shadow-2xl border-[var(--color-yellow)]"
+              id="btn-front-end"
+              data-testid="btn-front-end"
+            >
+              <img
+                src="asset/Rectangle 5.png"
+                class="absolute top-0 -right-5 inset-shadow-2xl"
+              />
+              <p class="absolute top-0 left-0 m-5 font-semibold font-inter">
+                Front-end
+              </p>
+
+              <img
+                src="asset/frontend-img.png"
+                class="absolute right-3 bottom-4"
+                id="img-icon-front-end"
+                data-testid="img-icon-front-end"
+              />
+            </button>
+            <button
+              class="relative w-[238px] h-[175px] bg-white border-2 rounded-tl-2xl rounded-bl-2xl shadow-2xl border-[var(--color-yellow)]"
+              id="btn-programação"
+              data-testid="btn-programação"
+            >
+              <img
+                src="asset/Rectangle 5.png"
+                class="absolute top-0 -right-5"
+              />
+              <p class="absolute top-0 left-0 m-5 font-semibold font-inter">
+                Programação
+              </p>
+
+              <img
+                src="asset/programação.png"
+                class="absolute right-3 bottom-4"
+                id="img-icon-programaçǎo"
+                data-testid="img-icon-programaçǎo"
+              />
+            </button>
+            <button
+              class="relative w-[238px] h-[175px] bg-white border-2 shadow-2xl rounded-tl-2xl rounded-bl-2xl border-[var(--color-yellow)]"
+              id="btn-mobile"
+              data-testid="btn-mobile"
+            >
+              <img
+                src="asset/Rectangle 5.png"
+                class="absolute top-0 -right-5 inset-shadow-2xl"
+              />
+              <p class="absolute top-0 left-0 m-5 font-semibold font-inter">
+                Mobile
+              </p>
+
+              <img
+                src="asset/mobile.png"
+                class="absolute right-3 bottom-4"
+                id="img-icon-mobile"
+                data-testid="img-icon-mobile"
+              />
+            </button>
+            <button
+              class="relative w-[238px] h-[175px] bg-white border-2 rounded-tl-2xl rounded-bl-2xl border-[var(--color-yellow)]"
+              id="btn-devops"
+              data-testid="btn-devops"
+            >
+              <img
+                src="asset/Rectangle 5.png"
+                class="absolute top-0 -right-5 inset-shadow-2xl"
+              />
+              <p class="absolute top-0 left-0 m-5 font-semibold font-inter">
+                Devops
+              </p>
+
+              <img
+                src="asset/devops.png"
+                class="absolute right-3 bottom-4"
+                id="img-icon-devops"
+                data-testid="img-icon-devops"
+              />
+            </button>
+            <button
+              class="relative w-[238px] h-[175px] bg-white border-2 rounded-tl-2xl rounded-bl-2xl border-[var(--color-yellow)]"
+              id="btn-uxedesign"
+              data-testid="btn-uxedesign"
+            >
+              <img
+                src="asset/Rectangle 5.png"
+                class="absolute top-0 -right-5 inset-shadow-2xl"
+              />
+              <p
+                class="absolute top-0 left-0 m-5 font-semibold text-left font-inter"
+              >
+                UX <br />
+                & Design
+              </p>
+
+              <img
+                src="asset/ux&design.png"
+                class="absolute right-3 bottom-4"
+                id="img-icon-ux&design"
+                data-testid="img-icon-ux&design"
+              />
+            </button>
+            <button
+              class="relative w-[238px] h-[175px] bg-white border-2 rounded-tl-2xl rounded-bl-2xl border-[var(--color-yellow)]"
+              id="datascience"
+              data-testid="datascience"
+            >
+              <img
+                src="asset/Rectangle 5.png"
+                class="absolute top-0 -right-5 inset-shadow-2xl"
+              />
+              <p
+                class="absolute top-0 left-0 m-5 font-semibold text-left font-inter"
+              >
+                Data <br />
+                Science
+              </p>
+
+              <img
+                src="asset/datascience.png"
+                class="absolute right-3 bottom-4"
+                id="img-icon-data-science"
+                data-testid="img-icon-data-science"
+              />
+            </button>
+            <button
+              class="relative w-[238px] h-[175px] bg-white border-2 rounded-tl-2xl rounded-bl-2xl border-[var(--color-yellow)]"
+              id="inovaçãoegestão"
+              data-testid="inovaçãoegestão"
+            >
+              <img
+                src="asset/Rectangle 5.png"
+                class="absolute top-0 -right-5 inset-shadow-2xl"
+              />
+              <p class="absolute top-0 left-0 m-5 font-semibold font-inter">
+                Inovação <br />
+                & Gestão
+              </p>
+
+              <img
+                src="asset/inovação&gestão.png"
+                class="absolute right-3 bottom-4"
+                id="img-icon-inovaçãoegestão"
+                data-testid="img-icon-inovaçãoegestão"
+              />
+            </button>
+            <button
+              class="relative w-[238px] h-[175px] bg-white border-2 rounded-tl-2xl rounded-bl-2xl border-[var(--color-yellow)]"
+              id="btn-inteligência-artificial"
+              data-testid="btn-inteligência-artificial"
+            >
+              <img
+                src="asset/Rectangle 5.png"
+                class="absolute top-0 -right-5 inset-shadow-2xl"
+              />
+              <p
+                class="absolute top-0 left-0 m-5 font-semibold text-left font-inter"
+              >
+                Inteligência <br />
+                Artificial
+              </p>
+
+              <img
+                src="asset/inteligênciaartificial.png"
+                class="absolute right-3 bottom-4"
+                id="img-icon-inteligência-artificial"
+                data-testid="img-icon-inteligência-artificial"
+              />
             </button>
           </div>
         </div>

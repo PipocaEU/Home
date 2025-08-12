@@ -4,83 +4,229 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="asset/expatcorn.png" type="x-icon" />
+  <meta name="description"
+    content="Pipoca Academy é uma plataforma de educação voltada para profissionais que desejam migrar para o mercado de tecnologia." />
+  <meta property="og:title" content="Pipoca Academy" />
   <title>Pipoca Academy</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
   <!-- Fontes -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
-  <style>
-    .font-fredoka {
-      font-family: 'Fredoka', sans-serif;
-    }
-
-    .font-opensans {
-      font-family: 'Open Sans', sans-serif;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-white font-opensans">
-  <!-- Header fixo (fixed top-0) no topo da página com fundo cinza claro e sombra -->
-  <header class="bg-gray-100 px-4 py-3 rounded-b-2xl shadow fixed top-0 left-0 w-full z-50">
-    <nav class="flex items-center justify-between mx-auto max-w-7xl">
-
+<body class="bg-gray-100 font-opensans">
+  <!-- Header fixo -->
+  <header class="fixed top-0 left-0 z-50 w-full px-4 py-3 bg-white bg-opacity-70" id="header">
+    <nav class="flex items-center justify-between mx-auto max-w-7xl" id="nav">
       <!-- Logo -->
-      <div class="flex items-center gap-2">
-        <div class="w-10 h-10 rounded-full overflow-hidden">
-          <a href="#home"></a>
-          <img src="asset/PA_logo.png" alt="Logo Pipoca Academy" class="w-full h-full object-cover" />
+      <div class="flex items-center gap-2" id="logo-area">
+        <div class="w-10 h-10 overflow-hidden rounded-full">
+          <a href="#home">
+            <img src="asset/PA_logo.png" alt="Logo Pipoca Academy" class="object-cover w-full h-full" id="logo-img" />
           </a>
         </div>
-        <span class="font-bold font-fredoka text-black text-lg">Pipoca Academy</span>
+        <span class="text-lg font-bold text-black font-fredoka">Pipoca Academy</span>
       </div>
 
-      <!-- Botão Menu (Hambúrguer) -->
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex items-center gap-[4vw] text-base leading-6 font-normal" id="desktop-menu">
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#sobre" class="hover:underline">Sobre</a>
+        <a href="#cursos" class="hover:underline">Cursos</a>
+        <!-- <a href="#mentoria" class="hover:underline">Mentoria</a>
+        <a href="#carreiras" class="hover:underline">Carreiras</a>   MANTER DESATIVADO ATÉ QUE AS OUTRAS SECÇÕES SEJAM IMPLEMENTADAS
+        <a href="#equipe" class="hover:underline">Equipe</a> -->
+      </div>
+
+      <!-- Botão Menu Mobile -->
       <div class="md:hidden">
-        <!-- Este botão só aparece em dispositivos com largura menor que o breakpoint 'md' -->
-        <!-- onclick chama a função JavaScript que alterna a visibilidade do menu -->
         <button onclick="onToggleMenu()" class="text-3xl focus:outline-none" id="menu-btn">
           ☰
         </button>
       </div>
-
-      <!-- Comportamento responsivo:
-     - 'absolute' e 'top-[-100%]' deixa o menu invisível inicialmente "fica fora da tela"
-     - 'top-[9%]' coloca esse elemento a 9% de distância do topo da tela
-     - quando clicamos no botão, trazemos ele pra 9% do topo, ou seja, ele aparece na tela! -->
-
-      <div
-        class="nav-links absolute md:static md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 transition-all duration-500 z-10">
-        <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-base leading-6 font-normal">
-          <!-- Cada item da navegação com efeito hover -->
-          <li><a href="#home" class=" hover:underline">Home</a></li>
-          <li><a href="#cursos" class=" hover:underline">Cursos</a></li>
-          <li><a href="#mentoria" class=" hover:underline">Mentoria</a></li>
-          <li><a href="#carreiras" class=" hover:underline">Carreiras</a></li>
-          <li><a href="#equipe" class=" hover:underline">Equipe</a></li>
-        </ul>
-      </div>
-
-
     </nav>
+
+    <!-- Menu Mobile -->
+    <div id="mobileMenu"
+      class="z-40 flex-col items-center hidden w-full gap-6 px-5 py-6 text-base font-normal leading-6 bg-gray-100 md:hidden">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#sobre" class="hover:underline">Sobre</a>
+      <a href="#cursos" class="hover:underline">Cursos</a>
+      <!-- <a href="#mentoria" class="hover:underline">Mentoria</a>
+      <a href="#carreiras" class="hover:underline">Carreiras</a>  MANTER DESATIVADO ATÉ QUE AS OUTRAS SECÇÕES SEJAM IMPLEMENTADAS
+      <a href="#equipe" class="hover:underline">Equipe</a> -->
+    </div>
   </header>
 
-  <script>
-    // Seleciona o menu de navegação e o botão do menu
-    const navLinks = document.querySelector('.nav-links');
-    const menuBtn = document.getElementById('menu-btn');
+  <main id="main-content">
+    <!-- Seção Hero -->
+    <section id="hero"
+      class="h-screen pt-[64px] bg-[url(asset/img_hero.jpg)] bg-cover bg-center md:bg-top text-white flex items-end md:items-center justify-center md:justify-start p-4 md:pl-[50px] lg:pl-[100px]">
+      <div class="bg-[#3F1F56] bg-opacity-80 w-full max-w-[600px] px-5 py-7 sm:px-10 sm:py-14 rounded-2xl"
+        id="hero-content">
+        <h2 class="text-2xl font-medium font-roboto lg:text-4xl sm:text-4xl" id="hero-title">
+          Transforme sua carreira. <br />
+          Migre para a tecnologia com suporte real e personalizado.
+        </h2>
+        <h3 class="pt-4 font-roboto lg:text-3xl/none sm:text-2xl/snug text-xl/snug" id="hero-subtitle">
+          Se reinvente com aprendizado ágil e mentorias focadas na sua entrada
+          no mercado de TI.
+        </h3>
+        <div class="flex flex-col pt-6 md:flex-row gap-4" id="hero-buttons">
+          <button class="bg-[var(--color-yellow)] text-black rounded-lg py-2 px-6 font-inter font-semibold"
+            id="btn-cadastro">
+            Cadastre-se grátis!
+          </button>
+          <button
+            class="bg-transparent rounded-lg border-[var(--color-yellow)] text-[var(--color-yellow)] border-2 py-2 px-6 font-inter font-semibold"
+            id="btn-saiba-mais">
+            Saiba mais
+          </button>
+        </div>
+      </div>
+    </section>
 
-    // Alterna a classe que posiciona o menu para visível ou escondido
+    <!-- Seção Cursos -->
+    <section id="cursos-oferecidos" class="py-12 px-4 max-w-7xl mx-auto">
+      <div class="flex flex-col gap-4 text-center mb-10" id="cursos-oferecidos-content">
+        <h2 class="font-inter font-bold text-2xl md:text-3xl lg:text-4xl" id="cursos-oferecidos-title">
+          Comece sua
+          <span class="text-[var(--color-yellow)]">transição</span> com o pé
+          direito <span class="text-[var(--color-yellow)]">.</span>
+        </h2>
+        <p class="font-inter font-medium text-base md:text-lg max-w-3xl mx-auto" id="cursos-oferecidos-text">
+          Aqui, aprender tecnologia é simples, direto e do seu jeito. Nossos
+          cursos de aprendizagem rápida são pensados para quem tem pouco
+          tempo, mas muita vontade de mudar de vida. Com conteúdos curtos e
+          práticos, você aprende só o que importa, no seu ritmo, com foco no
+          que o mercado realmente precisa.
+        </p>
+      </div>
+
+      <!-- Grade de Cursos - Responsiva -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="cursos-grid">
+        <!-- Front-end -->
+        <button
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          id="btn-front-end">
+          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+            style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
+          </div>
+          <div class="relative z-10 h-full flex flex-col justify-between items-start">
+            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">Front-end</p>
+            <img src="asset/frontend-img.png" class="self-end" />
+          </div>
+        </button>
+
+        <!-- Programação -->
+        <button
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          id="btn-front-end">
+          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+            style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
+          </div>
+          <div class="relative z-10 h-full flex flex-col justify-between items-start">
+            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">Programação</p>
+            <img src="asset/programacao.png" class="self-end" />
+          </div>
+        </button>
+
+        <!-- Mobile -->
+        <button
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          id="btn-front-end">
+          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+            style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
+          </div>
+          <div class="relative z-10 h-full flex flex-col justify-between items-start">
+            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">Mobile</p>
+            <img src="asset/mobile.png" class="self-end" />
+          </div>
+        </button>
+
+        <!-- Devops -->
+        <button
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          id="btn-front-end">
+          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+            style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
+          </div>
+          <div class="relative z-10 h-full flex flex-col justify-between items-start">
+            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">Devops</p>
+            <img src="asset/devops.png" class="self-end" />
+          </div>
+        </button>
+        <!-- UX & Design -->
+        <button
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          id="btn-front-end">
+          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+            style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
+          </div>
+          <div class="relative z-10 h-full flex flex-col justify-between items-start">
+            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">UX & Design</p>
+            <img src="asset/ux-e-design.png" class="self-end" />
+          </div>
+        </button>
+
+        <!-- Data Science -->
+        <button
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          id="btn-front-end">
+          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+            style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
+          </div>
+          <div class="relative z-10 h-full flex flex-col justify-between items-start">
+            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">Data Science</p>
+            <img src="asset/data-science.png" class="self-end" />
+          </div>
+        </button>
+
+        <!-- Inovação & Gestão -->
+        <button
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          id="btn-front-end">
+          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+            style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
+          </div>
+          <div class="relative z-10 h-full flex flex-col justify-between items-start">
+            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">
+              Inovação<br>& Gestão
+            </p>
+            <img src="asset/inovacao-e-gestao.png" class="self-end" />
+          </div>
+        </button>
+
+        <!-- Inteligência Artificial -->
+        <button
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          id="btn-front-end">
+          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+            style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
+          </div>
+          <div class="relative z-10 h-full flex flex-col justify-between items-start">
+            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">
+              Inteligência<br>Artificial
+            </p>
+            <img src="asset/inteligencia-artificial.png" class="self-end" />
+          </div>
+        </button>
+      </div>
+    </section>
+  </main>
+  <!-- Script JS do tooglemenu -->
+  <script>
+    const menu = document.getElementById("mobileMenu");
     function onToggleMenu() {
-      navLinks.classList.toggle('top-[9%]');
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("flex");
     }
   </script>
-<!-- espaçamento para compensar o header fixo -->
-<main class="pt-20">
- 
-</main>
 </body>
 
 </html>

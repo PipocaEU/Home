@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="asset/expatcorn.png" type="x-icon" />
+  <link rel="shortcut icon" href="asset/pipoca-academy-logo.png" type="x-icon" />
   <meta name="description"
     content="Pipoca Academy é uma plataforma de educação voltada para profissionais que desejam migrar para o mercado de tecnologia." />
   <meta property="og:title" content="Pipoca Academy" />
@@ -16,6 +16,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Antonia:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -25,12 +26,18 @@
     <nav class="flex items-center justify-between mx-auto max-w-7xl" id="nav">
       <!-- Logo -->
       <div class="flex items-center gap-2" id="logo-area">
-        <div class="w-10 h-10 overflow-hidden rounded-full">
+        <div class="w-8 h-8  ">
           <a href="#home">
-            <img src="asset/PA_logo.png" alt="Logo Pipoca Academy" class="object-cover w-full h-full" id="logo-img" />
+            <img src="asset/pipoca-academy-logo.png" alt="Logo Pipoca Academy" class="object-cover w-full h-full"
+              id="logo-img" />
           </a>
         </div>
-        <span class="text-lg font-bold text-black font-fredoka">Pipoca Academy</span>
+        <span style="display: block; text-align: center;">
+          <span
+            style="font-family: 'Antonia', serif; font-weight: 700; font-style: bold; color: #581B61; letter-spacing: 0.06em;">
+            <span style="font-size: 24px;">PIPOCA ACADEMY</span>
+          </span>
+        </span>
       </div>
 
       <!-- Menu Desktop -->
@@ -109,111 +116,118 @@
       </div>
 
       <!-- Grade de Cursos - Responsiva -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="cursos-grid">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 justify-items-center" id="cursos-grid">
         <!-- Front-end -->
         <button
-          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-full h-[172px] p-4 sm:p-5 max-w-[238px] lg:max-w-[275px] shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
           id="btn-front-end">
-          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+          <div class="absolute right-0 top-0 w-[120px] sm:w-[140px] lg:w-[172px] h-full bg-[#FBBB18]"
             style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
           </div>
           <div class="relative z-10 h-full flex flex-col justify-between items-start">
-            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">Front-end</p>
-            <img src="asset/frontend-img.png" class="self-end" />
+            <p class="font-inter font-semibold text-[20px] lg:text-[22px] leading-none tracking-normal text-left">
+              Front-end</p>
+            <img src="asset/frontend-img.png" class="self-end w-[80px] sm:w-[90px] lg:w-auto" />
           </div>
         </button>
 
         <!-- Programação -->
         <button
-          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-full h-[172px] p-4 sm:p-5 max-w-[238px] lg:max-w-[275px] shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
           id="btn-front-end">
-          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+          <div class="absolute right-0 top-0 w-[120px] sm:w-[140px] lg:w-[172px] h-full bg-[#FBBB18]"
             style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
           </div>
           <div class="relative z-10 h-full flex flex-col justify-between items-start">
-            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">Programação</p>
-            <img src="asset/programacao.png" class="self-end" />
+            <p class="font-inter font-semibold text-[20px] lg:text-[22px] leading-none tracking-normal text-left">
+              Programação</p>
+            <img src="asset/programacao.png" class="self-end w-[80px] sm:w-[90px] lg:w-auto" />
           </div>
         </button>
 
         <!-- Mobile -->
         <button
-          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-full h-[172px] p-4 sm:p-5 max-w-[238px] lg:max-w-[275px] shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
           id="btn-front-end">
-          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+          <div class="absolute right-0 top-0 w-[120px] sm:w-[140px] lg:w-[172px] h-full bg-[#FBBB18]"
             style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
           </div>
           <div class="relative z-10 h-full flex flex-col justify-between items-start">
-            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">Mobile</p>
-            <img src="asset/mobile.png" class="self-end" />
+            <p class="font-inter font-semibold text-[20px] lg:text-[22px] leading-none tracking-normal text-left">Mobile
+            </p>
+            <img src="asset/mobile.png" class="self-end w-[80px] sm:w-[90px] lg:w-auto" />
           </div>
         </button>
 
         <!-- Devops -->
         <button
-          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-full h-[172px] p-4 sm:p-5 max-w-[238px] lg:max-w-[275px] shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
           id="btn-front-end">
-          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+          <div class="absolute right-0 top-0 w-[120px] sm:w-[140px] lg:w-[172px] h-full bg-[#FBBB18]"
             style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
           </div>
           <div class="relative z-10 h-full flex flex-col justify-between items-start">
-            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">Devops</p>
-            <img src="asset/devops.png" class="self-end" />
+            <p class="font-inter font-semibold text-[20px] lg:text-[22px] leading-none tracking-normal text-left">Devops
+            </p>
+            <img src="asset/devops.png" class="self-end w-[80px] sm:w-[90px] lg:w-auto" />
           </div>
         </button>
+
         <!-- UX & Design -->
         <button
-          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-full h-[172px] p-4 sm:p-5 max-w-[238px] lg:max-w-[275px] shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
           id="btn-front-end">
-          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+          <div class="absolute right-0 top-0 w-[120px] sm:w-[140px] lg:w-[172px] h-full bg-[#FBBB18]"
             style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
           </div>
           <div class="relative z-10 h-full flex flex-col justify-between items-start">
-            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">UX & Design</p>
-            <img src="asset/ux-e-design.png" class="self-end" />
+            <p class="font-inter font-semibold text-[20px] lg:text-[22px] leading-none tracking-normal text-left">UX &
+              Design</p>
+            <img src="asset/ux-e-design.png" class="self-end w-[80px] sm:w-[90px] lg:w-auto" />
           </div>
         </button>
 
         <!-- Data Science -->
         <button
-          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-full h-[172px] p-4 sm:p-5 max-w-[238px] lg:max-w-[275px] shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
           id="btn-front-end">
-          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+          <div class="absolute right-0 top-0 w-[120px] sm:w-[140px] lg:w-[172px] h-full bg-[#FBBB18]"
             style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
           </div>
           <div class="relative z-10 h-full flex flex-col justify-between items-start">
-            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">Data Science</p>
-            <img src="asset/data-science.png" class="self-end" />
+            <p class="font-inter font-semibold text-[20px] lg:text-[22px] leading-none tracking-normal text-left">Data
+              Science</p>
+            <img src="asset/data-science.png" class="self-end w-[80px] sm:w-[90px] lg:w-auto" />
           </div>
         </button>
 
         <!-- Inovação & Gestão -->
         <button
-          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-full h-[172px] p-4 sm:p-5 max-w-[238px] lg:max-w-[275px] shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
           id="btn-front-end">
-          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+          <div class="absolute right-0 top-0 w-[120px] sm:w-[140px] lg:w-[172px] h-full bg-[#FBBB18]"
             style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
           </div>
           <div class="relative z-10 h-full flex flex-col justify-between items-start">
-            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">
+            <p class="font-inter font-semibold text-[20px] lg:text-[22px] leading-none tracking-normal text-left">
               Inovação<br>& Gestão
             </p>
-            <img src="asset/inovacao-e-gestao.png" class="self-end" />
+            <img src="asset/inovacao-e-gestao.png" class="self-end w-[80px] sm:w-[90px] lg:w-auto" />
           </div>
         </button>
 
         <!-- Inteligência Artificial -->
         <button
-          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-[275px] h-[172px] p-5 shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
+          class="curso-btn relative bg-white border border-[#FBBB18] rounded-lg w-full h-[172px] p-4 sm:p-5 max-w-[238px] lg:max-w-[275px] shadow-[0_4px_8px_rgba(0,0,0,0.2)] overflow-hidden"
           id="btn-front-end">
-          <div class="absolute right-0 top-0 w-[172px] h-full bg-[#FBBB18]"
+          <div class="absolute right-0 top-0 w-[120px] sm:w-[140px] lg:w-[172px] h-full bg-[#FBBB18]"
             style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%)">
           </div>
           <div class="relative z-10 h-full flex flex-col justify-between items-start">
-            <p class="font-inter font-semibold text-[22px] leading-none tracking-normal text-left">
+            <p class="font-inter font-semibold text-[20px] lg:text-[22px] leading-none tracking-normal text-left">
               Inteligência<br>Artificial
             </p>
-            <img src="asset/inteligencia-artificial.png" class="self-end" />
+            <img src="asset/inteligencia-artificial.png" class="self-end w-[80px] sm:w-[90px] lg:w-auto" />
           </div>
         </button>
       </div>

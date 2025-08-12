@@ -1,0 +1,22 @@
+/* styles.css */
+:root {
+  --color-yellow: #FFD700;
+  --color-purple: #3F1F56;
+}
+
+/* Efeitos hover - Melhor agrupados por componente */
+.curso-btn {
+  transition: all 0.3s ease;
+}
+
+.curso-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Adicione media queries quando necessário */
+@media (max-width: 640px) {
+  .hero-content {
+    padding: 1.5rem;
+  }
+}
